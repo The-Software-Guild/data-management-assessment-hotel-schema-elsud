@@ -10,7 +10,8 @@ phoneNumber VARCHAR(15) NOT NULL,
 address VARCHAR(50),
 city VARCHAR(25),
 state CHAR(2),
-zip CHAR(5)
+zip CHAR(5),
+CONSTRAINT uc_Guest UNIQUE (firstName,lastName,phoneNumber)
 );
 CREATE TABLE Amenity (
 amenityId INT AUTO_INCREMENT PRIMARY KEY,
